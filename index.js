@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path')
 
-const ROOT_FOLDER = 'demoo'
-const ROOT = 'F:/project/';
+const ROOT_FOLDER = 'demo'
+const ROOT = 'E:/';
 
 /**
  * 获取忽略文件里面的忽略目录
@@ -68,6 +68,7 @@ function scan(root, folder, dt) {
 let str = ''
 function generateTree(allTree, tree, child = 0) {
   let childDeep = child
+  ++ childDeep
   tree.forEach((item, index) => {
     if(child) {
       if(child > 1) {
@@ -87,7 +88,7 @@ function generateTree(allTree, tree, child = 0) {
       str += '/\n';
     } else if(item.isDir && item.children.length) {
       str += '\n';
-      generateTree(allTree, item.children, ++childDeep)
+      generateTree(allTree, item.children, childDeep)
     } else {
       str += '\n';
     }
