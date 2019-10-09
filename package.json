@@ -1,0 +1,11 @@
+{
+  "name": "file-scanner",
+  "version": "1.0.0",
+  "description": "文件扫描，生成文件树结构",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "Yu",
+  "license": "ISC"
+}
