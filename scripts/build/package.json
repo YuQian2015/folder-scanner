@@ -1,0 +1,20 @@
+{
+  "name": "@moyufed/folder-scanner",
+  "version": "0.0.1",
+  "description": "文件扫描，生成文件树结构",
+  "main": "index.js",
+  "keywords": [
+    "folder",
+    "folder-scanner"
+  ],
+  "author": "Yu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YuQian2015/folder-scanner"
+  },
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "fs-extra": "^8.1.0"
+  }
+}

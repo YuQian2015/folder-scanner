@@ -4,8 +4,13 @@
   "description": "文件扫描，生成文件树结构",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "publish:npm": "node scripts/build/publish.js"
   },
   "author": "Yu",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "child-process-promise": "^2.2.1",
+    "fs-extra": "^8.1.0"
+  }
 }
