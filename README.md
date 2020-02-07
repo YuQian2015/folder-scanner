@@ -42,3 +42,9 @@ return array
 返回文件结构树
 
 return string
+
+#### getFiles [Function]
+
+返回包含的文件路径
+
+return string

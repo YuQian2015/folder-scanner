@@ -57,6 +57,27 @@ class FolderScanner {
     return str
   }
 
+  getFiles() {
+    this.dirTree.length = 0;
+    this._scan(this.ROOT, this.ROOT_FOLDER, this.dirTree);
+    let str = ''
+    function fileList(tree, path = '') {
+      tree.forEach((item, index) => {
+        // 根目录和文件生成
+        if (item.isDir && item.children.length === 0) {
+          str += '';
+        } else if (item.isDir && item.children.length) {
+          fileList(item.children, path + '/' + item.name)
+        } else {
+          str += '"' + path + '/'+ item.name + '",';
+        }
+      });
+    }
+
+    fileList(this.dirTree);
+    return `[${str}]`
+  }
+
   _getIgnoreFolder(ignoreFile) {
     const folderStr = fs.readFileSync(ignoreFile, 'utf8').split('\n')
     return folderStr.map(item => item.replace('\r', ''))

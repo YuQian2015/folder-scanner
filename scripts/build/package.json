@@ -1,7 +1,7 @@
 {
   "name": "@moyufed/folder-scanner",
-  "version": "0.0.2",
-  "description": "文件扫描，生成文件树结构",
+  "version": "0.0.3",
+  "description": "文件扫描，获得文件/目录结构",
   "main": "index.js",
   "keywords": [
     "folder",
