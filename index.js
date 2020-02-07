@@ -52,7 +52,7 @@ class FolderScanner {
         }
       });
     }
-    
+
     generateTree(this.dirTree, this.dirTree);
     return str
   }
@@ -110,12 +110,4 @@ class FolderScanner {
   }
 }
 
-
-// fs.writeFileSync(path.resolve(__dirname, 'scanResult.json'), JSON.stringify(dirTree))
-
-// const fileScanner = new FolderScanner({
-//   location: 'F:/',
-//   rootFolder: 'test-page'
-// });
-
-// fileScanner.getTree();
+module.exports = FolderScanner;
